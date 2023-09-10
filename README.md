@@ -4,7 +4,7 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 
 ### 1. Array Operations
 
-* [Implementing Array](01 Array Operations\01_Implementing_Array.c)
+* Implementing Array
 * Array Insertion
 * Deletion Operation
 

@@ -48,3 +48,6 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 * InOrder Traversal in a Binary Tree
 * Checking if a binary tree is a binary search tree or not!
 * Searching in a Binary Search Trees
+* Iterative Search
+* Insertion in a Binary Search Tree
+* Deletion in a Binary Search Tree

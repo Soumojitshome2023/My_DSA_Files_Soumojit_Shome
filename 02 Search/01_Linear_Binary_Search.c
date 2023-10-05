@@ -2,6 +2,12 @@
 
 int linearSearch(int arr[], int size, int element)
 {
+    /*
+    Best Time Complexity : O(1)
+    Average Time Complexity : O(n)
+    Worst Time Complexity : O(n)
+    Worst Space Complexity : O(1)
+    */
     for (int i = 0; i < size; i++)
     {
         if (arr[i] == element)
@@ -14,6 +20,13 @@ int linearSearch(int arr[], int size, int element)
 
 int binarySearch(int arr[], int size, int element)
 {
+    /*
+    Best Time Complexity : O(1)
+    Average Time Complexity : O(logn)
+    Worst Time Complexity : O(logn)
+    Worst Space Complexity : O(1)
+    */
+
     int low, mid, high;
     low = 0;
     high = size - 1;

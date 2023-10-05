@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/*
+Best Time Complexity : O(nlogn)
+Average Time Complexity : O(nlogn)
+Worst Time Complexity : O(n^2)
+Worst Space Complexity : O(logn)
+*/
+
 void printArray(int *A, int n)
 {
     for (int i = 0; i < n; i++)

@@ -2,17 +2,17 @@
 
 Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 
-### 1. Array Operations
+### 1. [Array Operations](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/01%20Array%20Operations)
 
 * Implementing Array
 * Array Insertion
 * Deletion Operation
 
-### 2. Searching
+### 2. [Searching](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/02%20Searching)
 
 * Linear Binary Search
 
-### 3. Sorting
+### 3. [Sorting](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/03%20Sorting)
 
 * Bubble Sort
 * Insertion Sort
@@ -20,19 +20,20 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 * Quick Sort
 * Merge Sort
 * Count Sort
+* Heap Sort
 
-### 4. Stack
+### 4. [Stack](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/04%20Stack)
 
 * Stack Using Array
 * Stack Operations
 * Peek Operations
 
-### 5. Queue
+### 5. [Queue](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/05%20Queue)
 
 * Queue Operations
 * Circular Queue
 
-### 6. Linked List
+### 6. [Linked List](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/06%20Linked%20List)
 
 * Singly Linked List
 * Insertion
@@ -40,7 +41,7 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 * Circular Linked List
 * Doubly Linked List
 
-### 7. Trees
+### 7. [Trees](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/07%20Trees)
 
 * Linked Representation
 * Preorder Traversal Binary Tree

@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct Node
 {
@@ -7,20 +7,24 @@ struct Node
     struct Node *next;
 };
 
-void linkedListTraversal(struct Node *head){
+void linkedListTraversal(struct Node *head)
+{
     struct Node *ptr = head;
-    do{
+    do
+    {
         printf("Element is %d\n", ptr->data);
         ptr = ptr->next;
-    }while(ptr!=head);
+    } while (ptr != head);
 }
 
-struct Node * insertAtFirst(struct Node *head, int data){
-    struct Node * ptr = (struct Node *) malloc(sizeof(struct Node));
+struct Node *insertAtFirst(struct Node *head, int data)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
 
-    struct Node * p = head->next;
-    while(p->next != head){
+    struct Node *p = head->next;
+    while (p->next != head)
+    {
         p = p->next;
     }
     // At this point p points to the last node of this circular linked list
@@ -29,11 +33,11 @@ struct Node * insertAtFirst(struct Node *head, int data){
     ptr->next = head;
     head = ptr;
     return head;
-
 }
 
-int main(){
-    
+int main()
+{
+
     struct Node *head;
     struct Node *second;
     struct Node *third;

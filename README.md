@@ -12,6 +12,11 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 
 * Linear Binary Search
 
+| Search<br />Name | Best Time<br />Complexity | Average Time<br />Complexity | Worst Time<br />Complexity | Worst Space<br />Complexity |
+| :--------------: | :-----------------------: | :---------------------------: | :-------------------------: | :-------------------------: |
+|      Linear      |           O(1)           |             O(n)             |            O(n)            |            O(1)            |
+|      Binary      |           O(1)           |           O(log n)           |          O(log n)          |            O(1)            |
+
 ### 3. [Sorting](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/03%20Sorting)
 
 * Bubble Sort
@@ -22,16 +27,28 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 * Count Sort
 * Heap Sort
 
+| Sort<br />Name | Best Time<br />Complexity | Average Time<br />Complexity | Worst Time<br />Complexity | Worst Space<br />Complexity | Stable | **Adaptive** |
+| :------------: | :-----------------------: | :---------------------------: | :-------------------------: | :-------------------------: | :----: | :----------------: |
+|     Bubble     |           O(n)           |            O(n^2)            |           O(n^2)           |            O(1)            |  Yes  |        Yes        |
+|   Insertion   |           O(n)           |            O(n^2)            |           O(n^2)           |            O(1)            |  Yes  |        Yes        |
+|   Selection   |          O(n^2)          |            O(n^2)            |           O(n^2)           |            O(1)            |        |                    |
+|     Quick     |         O(nlogn)         |           O(nlogn)           |           O(n^2)           |           O(logn)           |        |        Yes        |
+|     Merge     |         O(nlogn)         |           O(nlogn)           |          O(nlogn)          |            O(n)            |  Yes  |                    |
+|      Heap      |         O(nlogn)         |           O(nlogn)           |          O(nlogn)          |            O(n)            |        |                    |
+
 ### 4. [Stack](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/04%20Stack)
 
 * Stack Using Array
 * Stack Operations
 * Peek Operations
+* Stack Using Linked List
+* Infix To Postfix Using Stack
 
 ### 5. [Queue](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/05%20Queue)
 
 * Queue Operations
 * Circular Queue
+* Queue Using Linked Lists
 
 ### 6. [Linked List](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/06%20Linked%20List)
 
@@ -52,3 +69,9 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 * Iterative Search
 * Insertion in a Binary Search Tree
 * Deletion in a Binary Search Tree
+* AVL Tree
+
+### 8. [Graph](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/08%20Graph)
+
+* BFS Breadth First Search
+* DFS Depth First Search

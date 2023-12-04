@@ -2,16 +2,16 @@
 
 #include <stdio.h>
 
-    /*
-    Best Time Complexity : O(nlogn)
-    Average Time Complexity : O(nlogn)
-    Worst Time Complexity : O(nlogn)
-    Worst Space Complexity : O(n)
-    */
+/*
+Best Time Complexity : O(nlogn)
+Average Time Complexity : O(nlogn)
+Worst Time Complexity : O(nlogn)
+Worst Space Complexity : O(n)
+*/
 
 // Function to swap the position of two elements
 
-void swap(int* a, int* b)
+void swap(int *a, int *b)
 {
 
 	int temp = *a;
@@ -50,7 +50,8 @@ void heapify(int arr[], int N, int i)
 	// Swap and continue heapifying
 	// if root is not largest
 	// If largest is not root
-	if (largest != i) {
+	if (largest != i)
+	{
 
 		swap(&arr[i], &arr[largest]);
 
@@ -70,7 +71,8 @@ void heapSort(int arr[], int N)
 		heapify(arr, N, i);
 
 	// Heap sort
-	for (int i = N - 1; i >= 0; i--) {
+	for (int i = N - 1; i >= 0; i--)
+	{
 
 		swap(&arr[0], &arr[i]);
 
@@ -92,7 +94,7 @@ void printArray(int arr[], int N)
 // Driver's code
 int main()
 {
-	int arr[] = { 12, 11, 13, 5, 6, 7 };
+	int arr[] = {12, 11, 13, 5, 6, 7};
 	int N = sizeof(arr) / sizeof(arr[0]);
 
 	// Function call

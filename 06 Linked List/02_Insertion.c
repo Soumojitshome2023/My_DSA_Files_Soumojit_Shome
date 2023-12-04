@@ -1,9 +1,10 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-struct Node{
+struct Node
+{
     int data;
-    struct Node * next;
+    struct Node *next;
 };
 
 void linkedListTraversal(struct Node *ptr)
@@ -16,21 +17,23 @@ void linkedListTraversal(struct Node *ptr)
 }
 
 // Case 1
-struct Node * insertAtFirst(struct Node *head, int data){
-    struct Node * ptr = (struct Node *) malloc(sizeof(struct Node));
+struct Node *insertAtFirst(struct Node *head, int data)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
 
     ptr->next = head;
-    return ptr; 
+    return ptr;
 }
 
 // Case 2
-struct Node * insertAtIndex(struct Node *head, int data, int index){
-    struct Node * ptr = (struct Node *) malloc(sizeof(struct Node));
-    struct Node * p = head;
+struct Node *insertAtIndex(struct Node *head, int data, int index)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *p = head;
     int i = 0;
 
-    while (i!=index-1)
+    while (i != index - 1)
     {
         p = p->next;
         i++;
@@ -42,12 +45,14 @@ struct Node * insertAtIndex(struct Node *head, int data, int index){
 }
 
 // Case 3
-struct Node * insertAtEnd(struct Node *head, int data){
-    struct Node * ptr = (struct Node *) malloc(sizeof(struct Node));
+struct Node *insertAtEnd(struct Node *head, int data)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
-    struct Node * p = head;
+    struct Node *p = head;
 
-    while(p->next!=NULL){
+    while (p->next != NULL)
+    {
         p = p->next;
     }
     p->next = ptr;
@@ -56,19 +61,19 @@ struct Node * insertAtEnd(struct Node *head, int data){
 }
 
 // Case 4
-struct Node * insertAfterNode(struct Node *head, struct Node *prevNode, int data){
-    struct Node * ptr = (struct Node *) malloc(sizeof(struct Node));
+struct Node *insertAfterNode(struct Node *head, struct Node *prevNode, int data)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
 
     ptr->next = prevNode->next;
     prevNode->next = ptr;
 
-    
     return head;
 }
 
-
-int main(){
+int main()
+{
     struct Node *head;
     struct Node *second;
     struct Node *third;
@@ -105,6 +110,5 @@ int main(){
     printf("\nLinked list after insertion\n");
     linkedListTraversal(head);
 
-    
     return 0;
 }

@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-/*
+/*============================================
 Best Time Complexity : O(nlogn)
 Average Time Complexity : O(nlogn)
 Worst Time Complexity : O(nlogn)
 Worst Space Complexity : O(n)
-*/
+============================================*/
 
+// ====================== Print Array ======================
 void printArray(int *A, int n)
 {
     for (int i = 0; i < n; i++)
@@ -16,6 +17,7 @@ void printArray(int *A, int n)
     printf("\n");
 }
 
+// ====================== Merge ======================
 void merge(int A[], int mid, int low, int high)
 {
     int i, j, k, B[100];
@@ -56,6 +58,7 @@ void merge(int A[], int mid, int low, int high)
     }
 }
 
+// ====================== Merge Sort ======================
 void mergeSort(int A[], int low, int high)
 {
     int mid;
@@ -68,6 +71,7 @@ void mergeSort(int A[], int low, int high)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     // int A[] = {9, 14, 4, 8, 7, 5, 6};
@@ -78,3 +82,5 @@ int main()
     printArray(A, n);
     return 0;
 }
+
+// ==================================================================

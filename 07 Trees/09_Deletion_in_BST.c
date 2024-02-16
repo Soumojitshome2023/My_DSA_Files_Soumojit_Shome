@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 
+// ====================== Node ======================
 struct node
 {
     int data;
@@ -8,6 +9,7 @@ struct node
     struct node *right;
 };
 
+// ====================== Create Node ======================
 struct node *createNode(int data)
 {
     struct node *n;                                 // creating a node pointer
@@ -18,6 +20,7 @@ struct node *createNode(int data)
     return n;                                       // Finally returning the created node
 }
 
+// ======================Pre Order ======================
 void preOrder(struct node *root)
 {
     if (root != NULL)
@@ -28,6 +31,7 @@ void preOrder(struct node *root)
     }
 }
 
+// ====================== Post Order ======================
 void postOrder(struct node *root)
 {
     if (root != NULL)
@@ -38,6 +42,7 @@ void postOrder(struct node *root)
     }
 }
 
+// ====================== In Order ======================
 void inOrder(struct node *root)
 {
     if (root != NULL)
@@ -48,6 +53,7 @@ void inOrder(struct node *root)
     }
 }
 
+// ====================== Is BST ======================
 int isBST(struct node *root)
 {
     static struct node *prev = NULL;
@@ -70,6 +76,7 @@ int isBST(struct node *root)
     }
 }
 
+// ====================== Search ======================
 struct node *searchIter(struct node *root, int key)
 {
     while (root != NULL)
@@ -90,6 +97,7 @@ struct node *searchIter(struct node *root, int key)
     return NULL;
 }
 
+// ====================== Insert ======================
 void insert(struct node *root, int key)
 {
     struct node *prev = NULL;
@@ -121,6 +129,7 @@ void insert(struct node *root, int key)
     }
 }
 
+// ====================== In Order Predecessor ======================
 struct node *inOrderPredecessor(struct node *root)
 {
     root = root->left;
@@ -131,6 +140,7 @@ struct node *inOrderPredecessor(struct node *root)
     return root;
 }
 
+// ====================== Delete Node ======================
 struct node *deleteNode(struct node *root, int value)
 {
 
@@ -164,6 +174,7 @@ struct node *deleteNode(struct node *root, int value)
     return root;
 }
 
+// ====================== Main ======================
 int main()
 {
 
@@ -193,3 +204,5 @@ int main()
 
     return 0;
 }
+
+// ============================================

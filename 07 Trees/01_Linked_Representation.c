@@ -1,22 +1,28 @@
-#include<stdio.h>
-#include<malloc.h>
+#include <stdio.h>
+#include <malloc.h>
 
-struct node{
+// ====================== Node ======================
+struct node
+{
     int data;
-    struct node* left;
-    struct node* right;
+    struct node *left;
+    struct node *right;
 };
 
-struct node* createNode(int data){
-    struct node *n; // creating a node pointer
-    n = (struct node *) malloc(sizeof(struct node)); // Allocating memory in the heap
-    n->data = data; // Setting the data
-    n->left = NULL; // Setting the left and right children to NULL
-    n->right = NULL; // Setting the left and right children to NULL
-    return n; // Finally returning the created node
+// ====================== Create Node ======================
+struct node *createNode(int data)
+{
+    struct node *n;                                 // creating a node pointer
+    n = (struct node *)malloc(sizeof(struct node)); // Allocating memory in the heap
+    n->data = data;                                 // Setting the data
+    n->left = NULL;                                 // Setting the left and right children to NULL
+    n->right = NULL;                                // Setting the left and right children to NULL
+    return n;                                       // Finally returning the created node
 }
 
-int main(){
+// ====================== Main ======================
+int main()
+{
     /*
     // Constructing the root node
     struct node *p;
@@ -39,7 +45,7 @@ int main(){
     p2->left = NULL;
     p2->right = NULL;
     */
-   
+
     // Constructing the root node - Using Function (Recommended)
     struct node *p = createNode(2);
     struct node *p1 = createNode(1);
@@ -50,3 +56,5 @@ int main(){
     p->right = p2;
     return 0;
 }
+
+// ==================================================================

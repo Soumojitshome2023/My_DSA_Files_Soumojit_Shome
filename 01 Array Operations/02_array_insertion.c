@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// ====================== Display ======================
 void display(int arr[], int n)
 {
     // Code for Traversal
@@ -10,6 +11,7 @@ void display(int arr[], int n)
     printf("\n");
 }
 
+// ====================== Insert Index ======================
 int indInsertion(int arr[], int size, int element, int capacity, int index)
 {
     // code for Insertion
@@ -25,6 +27,7 @@ int indInsertion(int arr[], int size, int element, int capacity, int index)
     return 1;
 }
 
+// ====================== Main ======================
 int main()
 {
     int arr[100] = {7, 8, 12, 27, 88};
@@ -35,3 +38,5 @@ int main()
     display(arr, size);
     return 0;
 }
+
+// ============================================

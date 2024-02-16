@@ -4,12 +4,14 @@
 struct Node *f = NULL;
 struct Node *r = NULL;
 
+// ====================== Node ======================
 struct Node
 {
     int data;
     struct Node *next;
 };
 
+// ====================== Traversal ======================
 void linkedListTraversal(struct Node *ptr)
 {
     printf("Printing the elements of this linked list\n");
@@ -20,6 +22,7 @@ void linkedListTraversal(struct Node *ptr)
     }
 }
 
+// ====================== En Queue ======================
 void enqueue(int val)
 {
     struct Node *n = (struct Node *)malloc(sizeof(struct Node));
@@ -43,6 +46,7 @@ void enqueue(int val)
     }
 }
 
+// ====================== De Queue ======================
 int dequeue()
 {
     int val = -1;
@@ -60,6 +64,7 @@ int dequeue()
     return val;
 }
 
+// ====================== Main ======================
 int main()
 {
     linkedListTraversal(f);
@@ -75,3 +80,4 @@ int main()
     linkedListTraversal(f);
     return 0;
 }
+// ==================================================================

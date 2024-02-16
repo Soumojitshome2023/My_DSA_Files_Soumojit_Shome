@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-/*
+/*============================================
 Best Time Complexity : O(n)
 Average Time Complexity : O(n^2)
 Worst Time Complexity : O(n^2)
 Worst Space Complexity : O(1)
-*/
+============================================*/
 
+// ====================== Print Array ======================
 void printArray(int *A, int n)
 {
     for (int i = 0; i < n; i++)
@@ -15,6 +16,8 @@ void printArray(int *A, int n)
     }
     printf("\n");
 }
+
+// ====================== Bubble Sort ======================
 void bubbleSort(int *A, int n)
 {
     int temp;
@@ -34,6 +37,7 @@ void bubbleSort(int *A, int n)
     }
 }
 
+// ====================== Bubble Sort Adaptive ======================
 void bubbleSortAdaptive(int *A, int n)
 {
     int temp;
@@ -59,6 +63,7 @@ void bubbleSortAdaptive(int *A, int n)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     // int A[] = {12, 54, 65, 7, 23, 9};
@@ -70,3 +75,4 @@ int main()
     printArray(A, n); // Printing the array before sorting
     return 0;
 }
+// ============================================

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Stack ======================
 struct stack
 {
     int size;
@@ -8,6 +9,7 @@ struct stack
     int *arr;
 };
 
+// ====================== Is Empty ======================
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -20,6 +22,7 @@ int isEmpty(struct stack *ptr)
     }
 }
 
+// ====================== Is Full ======================
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -32,6 +35,7 @@ int isFull(struct stack *ptr)
     }
 }
 
+// ====================== Push ======================
 void push(struct stack *ptr, int val)
 {
     if (isFull(ptr))
@@ -45,6 +49,7 @@ void push(struct stack *ptr, int val)
     }
 }
 
+// ====================== Pop ======================
 int pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
@@ -60,6 +65,7 @@ int pop(struct stack *ptr)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
@@ -70,3 +76,5 @@ int main()
 
     return 0;
 }
+
+// ============================================

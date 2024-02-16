@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Node ======================
 struct Node
 {
     int data;
     struct Node *next;
 };
 
+// ====================== Traversal ======================
 void linkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
@@ -16,6 +18,7 @@ void linkedListTraversal(struct Node *ptr)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     struct Node *head;
@@ -48,3 +51,5 @@ int main()
     linkedListTraversal(head);
     return 0;
 }
+
+// ==================================================================

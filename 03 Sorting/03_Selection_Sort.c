@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-/*
+/*============================================
 Best Time Complexity : O(n^2)
 Average Time Complexity : O(n^2)
 Worst Time Complexity : O(n^2)
 Worst Space Complexity : O(1)
-*/
+============================================*/
 
+// ====================== Print Array ======================
 void printArray(int *A, int n)
 {
     for (int i = 0; i < n; i++)
@@ -16,6 +17,7 @@ void printArray(int *A, int n)
     printf("\n");
 }
 
+// ====================== Selection Sort ======================
 void selectionSort(int *A, int n)
 {
     int indexOfMin, temp;
@@ -37,6 +39,7 @@ void selectionSort(int *A, int n)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     // Input Array (There will be total n-1 passes. 5-1 = 4 in this case!)
@@ -67,3 +70,5 @@ int main()
 
     return 0;
 }
+
+// ==================================================================

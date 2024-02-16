@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== NOde ======================
 struct Node
 {
     int data;
     struct Node *next;
 };
 
+// ====================== Traversal ======================
 void linkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
@@ -17,6 +19,7 @@ void linkedListTraversal(struct Node *ptr)
 }
 
 // Case 1: Deleting the first element from the linked list
+// ====================== Delete First ======================
 struct Node *deleteFirst(struct Node *head)
 {
     struct Node *ptr = head;
@@ -26,6 +29,7 @@ struct Node *deleteFirst(struct Node *head)
 }
 
 // Case 2: Deleting the element at a given index from the linked list
+// ====================== Delete At Index ======================
 struct Node *deleteAtIndex(struct Node *head, int index)
 {
     struct Node *p = head;
@@ -42,6 +46,7 @@ struct Node *deleteAtIndex(struct Node *head, int index)
 }
 
 // Case 3: Deleting the last element
+// ====================== Delete At Last ======================
 struct Node *deleteAtLast(struct Node *head)
 {
     struct Node *p = head;
@@ -58,6 +63,7 @@ struct Node *deleteAtLast(struct Node *head)
 }
 
 // Case 4: Deleting the element with a given value from the linked list
+// ====================== Delete Value ======================
 struct Node *deleteByValue(struct Node *head, int value)
 {
     struct Node *p = head;
@@ -76,6 +82,7 @@ struct Node *deleteByValue(struct Node *head, int value)
     return head;
 }
 
+// ====================== Main ======================
 int main()
 {
     struct Node *head;
@@ -116,3 +123,5 @@ int main()
 
     return 0;
 }
+
+// ======================

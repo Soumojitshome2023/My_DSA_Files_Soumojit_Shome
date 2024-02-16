@@ -1,64 +1,85 @@
-#include<stdio.h>
-#include<malloc.h>
+#include <stdio.h>
+#include <malloc.h>
 
-struct node{
+// ====================== Node ======================
+struct node
+{
     int data;
-    struct node* left;
-    struct node* right;
+    struct node *left;
+    struct node *right;
 };
 
-struct node* createNode(int data){
-    struct node *n; // creating a node pointer
-    n = (struct node *) malloc(sizeof(struct node)); // Allocating memory in the heap
-    n->data = data; // Setting the data
-    n->left = NULL; // Setting the left and right children to NULL
-    n->right = NULL; // Setting the left and right children to NULL
-    return n; // Finally returning the created node
+// ====================== Create Node ======================
+struct node *createNode(int data)
+{
+    struct node *n;                                 // creating a node pointer
+    n = (struct node *)malloc(sizeof(struct node)); // Allocating memory in the heap
+    n->data = data;                                 // Setting the data
+    n->left = NULL;                                 // Setting the left and right children to NULL
+    n->right = NULL;                                // Setting the left and right children to NULL
+    return n;                                       // Finally returning the created node
 }
 
-void preOrder(struct  node* root){
-    if(root!=NULL){
+// ====================== Pre Order ======================
+void preOrder(struct node *root)
+{
+    if (root != NULL)
+    {
         printf("%d ", root->data);
         preOrder(root->left);
         preOrder(root->right);
     }
 }
 
-void postOrder(struct  node* root){
-    if(root!=NULL){
+//  ====================== Post Order ======================
+void postOrder(struct node *root)
+{
+    if (root != NULL)
+    {
         postOrder(root->left);
         postOrder(root->right);
         printf("%d ", root->data);
     }
 }
 
-void inOrder(struct  node* root){
-    if(root!=NULL){
+// ====================== In Order ======================
+void inOrder(struct node *root)
+{
+    if (root != NULL)
+    {
         inOrder(root->left);
         printf("%d ", root->data);
         inOrder(root->right);
     }
 }
 
-int isBST(struct  node* root){
+// ====================== Is BST ======================
+int isBST(struct node *root)
+{
     static struct node *prev = NULL;
-    if(root!=NULL){
-        if(!isBST(root->left)){
+    if (root != NULL)
+    {
+        if (!isBST(root->left))
+        {
             return 0;
         }
-        if(prev!=NULL && root->data <= prev->data){
+        if (prev != NULL && root->data <= prev->data)
+        {
             return 0;
         }
         prev = root;
         return isBST(root->right);
     }
-    else{
+    else
+    {
         return 1;
     }
 }
 
-int main(){
-     
+// ====================== Main ======================
+int main()
+{
+
     // Constructing the root node - Using Function (Recommended)
     struct node *p = createNode(5);
     struct node *p1 = createNode(3);
@@ -70,7 +91,7 @@ int main(){
     //     / \
     //    3   6
     //   / \
-    //  1   4  
+    //  1   4
 
     // Linking the root node with left and right children
     p->left = p1;
@@ -80,16 +101,20 @@ int main(){
 
     // preOrder(p);
     // printf("\n");
-    // postOrder(p); 
+    // postOrder(p);
     // printf("\n");
     inOrder(p);
     printf("\n");
-    // printf("%d", isBST(p)); 
-    if(isBST(p)){
-        printf("This is a bst" );
+    // printf("%d", isBST(p));
+    if (isBST(p))
+    {
+        printf("This is a bst");
     }
-    else{
+    else
+    {
         printf("This is not a bst");
     }
     return 0;
 }
+
+// ==================================================================

@@ -1,6 +1,6 @@
-![MasterHead](https://bestanimations.com/media/sky/1088683783milky-way-night-sky-gif.gif)
+![MasterHead](https://raw.githubusercontent.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/main/Others/milky-way-night-sky-gif.gif)
 
-Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
+Maintained by [Soumojit Shome](https://soumojitshome.vercel.app)
 
 ### 1. [Array Operations](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/01%20Array%20Operations)
 
@@ -75,3 +75,11 @@ Maintained by [Soumojit Shome](https://iamsoumojit.vercel.app/)
 
 * BFS Breadth First Search
 * DFS Depth First Search
+
+### 9. [Hashing](https://github.com/Soumojitshome2023/My_DSA_Files_Soumojit_Shome/tree/main/09%20Hashing)
+
+* Hashing
+
+
+
+## Best of Luck 🙂🤗🎉

@@ -2,14 +2,14 @@
 
 #include <stdio.h>
 
-/*
+/*============================================
 Best Time Complexity : O(nlogn)
 Average Time Complexity : O(nlogn)
 Worst Time Complexity : O(nlogn)
 Worst Space Complexity : O(n)
-*/
+============================================*/
 
-// Function to swap the position of two elements
+// ====================== Swap ======================
 
 void swap(int *a, int *b)
 {
@@ -22,6 +22,8 @@ void swap(int *a, int *b)
 // To heapify a subtree rooted with node i
 // which is an index in arr[].
 // n is size of heap
+
+// ====================== Heapify ======================
 void heapify(int arr[], int N, int i)
 {
 	// Find largest among root,
@@ -62,6 +64,8 @@ void heapify(int arr[], int N, int i)
 }
 
 // Main function to do heap sort
+
+// ====================== Heap Sort ======================
 void heapSort(int arr[], int N)
 {
 
@@ -84,6 +88,7 @@ void heapSort(int arr[], int N)
 }
 
 // A utility function to print array of size n
+// ====================== Print Array ======================
 void printArray(int arr[], int N)
 {
 	for (int i = 0; i < N; i++)
@@ -92,6 +97,7 @@ void printArray(int arr[], int N)
 }
 
 // Driver's code
+// ====================== Main ======================
 int main()
 {
 	int arr[] = {12, 11, 13, 5, 6, 7};
@@ -103,4 +109,4 @@ int main()
 	printArray(arr, N);
 }
 
-// This code is contributed by _i_plus_plus_.
+// ==================================================================

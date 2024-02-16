@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Node ======================
 struct Node
 {
     int data;
     struct Node *next;
 };
 
+// ====================== Traversal ======================
 void linkedListTraversal(struct Node *head)
 {
     struct Node *ptr = head;
@@ -17,6 +19,7 @@ void linkedListTraversal(struct Node *head)
     } while (ptr != head);
 }
 
+// ====================== Insert At First ======================
 struct Node *insertAtFirst(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -35,6 +38,7 @@ struct Node *insertAtFirst(struct Node *head, int data)
     return head;
 }
 
+// ====================== Main ======================
 int main()
 {
 
@@ -67,3 +71,5 @@ int main()
 
     return 0;
 }
+
+// ============================================

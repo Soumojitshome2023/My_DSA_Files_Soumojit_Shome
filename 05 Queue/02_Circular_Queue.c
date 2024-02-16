@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Circular Queue ======================
 struct circularQueue
 {
     int size;
@@ -9,6 +10,7 @@ struct circularQueue
     int *arr;
 };
 
+// ====================== Is Empty ======================
 int isEmpty(struct circularQueue *q)
 {
     if (q->r == q->f)
@@ -18,6 +20,7 @@ int isEmpty(struct circularQueue *q)
     return 0;
 }
 
+// ====================== Is Full ======================
 int isFull(struct circularQueue *q)
 {
     if ((q->r + 1) % q->size == q->f)
@@ -27,6 +30,7 @@ int isFull(struct circularQueue *q)
     return 0;
 }
 
+// ====================== En Queue ======================
 void enqueue(struct circularQueue *q, int val)
 {
     if (isFull(q))
@@ -41,6 +45,7 @@ void enqueue(struct circularQueue *q, int val)
     }
 }
 
+// ====================== De Queue ======================
 int dequeue(struct circularQueue *q)
 {
     int a = -1;
@@ -56,6 +61,7 @@ int dequeue(struct circularQueue *q)
     return a;
 }
 
+// ====================== Main ======================
 int main()
 {
     struct circularQueue q;
@@ -85,3 +91,5 @@ int main()
 
     return 0;
 }
+
+// ==================================================================

@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-/*
+/*============================================
 Best Time Complexity : O(n)
 Average Time Complexity : O(n^2)
 Worst Time Complexity : O(n^2)
 Worst Space Complexity : O(1)
-*/
+============================================*/
 
+// ======================Print Array ======================
 void printArray(int *A, int n)
 {
     for (int i = 0; i < n; i++)
@@ -16,6 +17,7 @@ void printArray(int *A, int n)
     printf("\n");
 }
 
+// ====================== Insertion Sort ======================
 void insertionSort(int *A, int n)
 {
     int key, j;
@@ -34,6 +36,7 @@ void insertionSort(int *A, int n)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     // -1   0    1   2   3   4   5
@@ -63,3 +66,5 @@ int main()
     printArray(A, n);
     return 0;
 }
+
+// ==================================================================

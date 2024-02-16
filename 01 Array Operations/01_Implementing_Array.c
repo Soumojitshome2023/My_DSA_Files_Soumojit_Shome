@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== My Array ======================
 struct myArray
 {
     int total_size;
@@ -8,6 +9,7 @@ struct myArray
     int *ptr;
 };
 
+// ====================== Create Array ======================
 void createArray(struct myArray *a, int tSize, int uSize)
 {
     // (*a).total_size = tSize;
@@ -19,6 +21,7 @@ void createArray(struct myArray *a, int tSize, int uSize)
     a->ptr = (int *)malloc(tSize * sizeof(int));
 }
 
+// ====================== Show ======================
 void show(struct myArray *a)
 {
     for (int i = 0; i < a->used_size; i++)
@@ -27,6 +30,7 @@ void show(struct myArray *a)
     }
 }
 
+// ====================== Set Val ======================
 void setVal(struct myArray *a)
 {
     int n;
@@ -38,6 +42,7 @@ void setVal(struct myArray *a)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     struct myArray marks;
@@ -50,3 +55,5 @@ int main()
 
     return 0;
 }
+
+// ==================================================================

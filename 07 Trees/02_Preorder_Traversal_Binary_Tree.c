@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 
+// ====================== Node ======================
 struct node
 {
     int data;
@@ -8,6 +9,7 @@ struct node
     struct node *right;
 };
 
+// ====================== Create Node ======================
 struct node *createNode(int data)
 {
     struct node *n;                                 // creating a node pointer
@@ -18,6 +20,7 @@ struct node *createNode(int data)
     return n;                                       // Finally returning the created node
 }
 
+// ====================== Pre Order ======================
 void preOrder(struct node *root)
 {
     if (root != NULL)
@@ -28,6 +31,7 @@ void preOrder(struct node *root)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
 
@@ -54,3 +58,5 @@ int main()
     preOrder(p);
     return 0;
 }
+
+// ==================================================================

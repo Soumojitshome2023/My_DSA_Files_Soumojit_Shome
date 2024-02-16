@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// ====================== Linear Search ======================
 int linearSearch(int arr[], int size, int element)
 {
     /*
@@ -18,6 +19,7 @@ int linearSearch(int arr[], int size, int element)
     return -1;
 }
 
+// ====================== Binary Search ======================
 int binarySearch(int arr[], int size, int element)
 {
     /*
@@ -50,6 +52,7 @@ int binarySearch(int arr[], int size, int element)
     return -1;
 }
 
+// ====================== Main ======================
 int main()
 {
     // Unsorted array for linear search
@@ -64,3 +67,5 @@ int main()
     printf("The element %d was found at index %d \n", element, searchIndex);
     return 0;
 }
+
+// ============================================

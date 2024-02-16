@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Node ======================
 struct Node
 {
     int data;
@@ -9,6 +10,7 @@ struct Node
 
 struct Node *top = NULL;
 
+// ====================== Traversal ======================
 void linkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
@@ -18,6 +20,7 @@ void linkedListTraversal(struct Node *ptr)
     }
 }
 
+// ====================== Is Empty ======================
 int isEmpty(struct Node *top)
 {
     if (top == NULL)
@@ -30,6 +33,7 @@ int isEmpty(struct Node *top)
     }
 }
 
+// ====================== Is Full ======================
 int isFull(struct Node *top)
 {
     struct Node *p = (struct Node *)malloc(sizeof(struct Node));
@@ -43,6 +47,7 @@ int isFull(struct Node *top)
     }
 }
 
+// ====================== Push ======================
 struct Node *push(struct Node *top, int x)
 {
     if (isFull(top))
@@ -59,6 +64,7 @@ struct Node *push(struct Node *top, int x)
     }
 }
 
+// ====================== Pop ======================
 int pop(struct Node *tp)
 {
     if (isEmpty(tp))
@@ -75,6 +81,7 @@ int pop(struct Node *tp)
     }
 }
 
+// ====================== Peek ======================
 int peek(int pos)
 {
     struct Node *ptr = top;
@@ -92,6 +99,7 @@ int peek(int pos)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     top = push(top, 28);
@@ -106,3 +114,5 @@ int main()
     }
     return 0;
 }
+
+// ==================================================================

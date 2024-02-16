@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Node ======================
 struct Node
 {
     int key;
@@ -9,6 +10,7 @@ struct Node
     int height;
 };
 
+// ====================== Get Height ======================
 int getHeight(struct Node *n)
 {
     if (n == NULL)
@@ -16,6 +18,7 @@ int getHeight(struct Node *n)
     return n->height;
 }
 
+// ====================== Create Node ======================
 struct Node *createNode(int key)
 {
     struct Node *node = (struct Node *)malloc(sizeof(struct Node));
@@ -26,11 +29,13 @@ struct Node *createNode(int key)
     return node;
 }
 
+// ====================== Max ======================
 int Max(int a, int b)
 {
     return (a > b) ? a : b;
 }
 
+// ====================== Get Balance Factor ======================
 int getBalanceFactor(struct Node *n)
 {
     if (n == NULL)
@@ -40,6 +45,7 @@ int getBalanceFactor(struct Node *n)
     return getHeight(n->left) - getHeight(n->right);
 }
 
+// ====================== Right Rotate ======================
 struct Node *rightRotate(struct Node *y)
 {
     struct Node *x = y->left;
@@ -54,6 +60,7 @@ struct Node *rightRotate(struct Node *y)
     return x;
 }
 
+// ====================== Left Rotate ======================
 struct Node *leftRotate(struct Node *x)
 {
     struct Node *y = x->right;
@@ -68,6 +75,7 @@ struct Node *leftRotate(struct Node *x)
     return y;
 }
 
+// ====================== Insert ======================
 struct Node *insert(struct Node *node, int key)
 {
     if (node == NULL)
@@ -106,6 +114,7 @@ struct Node *insert(struct Node *node, int key)
     return node;
 }
 
+// ====================== pre Order ======================
 void preOrder(struct Node *root)
 {
     if (root != NULL)
@@ -116,6 +125,7 @@ void preOrder(struct Node *root)
     }
 }
 
+// ====================== Main ======================
 int main()
 {
     struct Node *root = NULL;
@@ -127,30 +137,31 @@ int main()
     root = insert(root, 6);
     root = insert(root, 3);
     preOrder(root);
-/*
-            1
-           / \
-              2
-             / \  
-                4
+    /*
+                1
                / \
-                  5 
+                  2
                  / \
-                    6
+                    4
                    / \
-                  3
- 
+                      5
+                     / \
+                        6
+                       / \
+                      3
 
-Ans : 4 2 1 3 5 6
 
-AVL : 
-         4
-       /   \
-      2     5
-     /\     /\
-    1  3   6
-*/
+    Ans : 4 2 1 3 5 6
 
+    AVL :
+             4
+           /   \
+          2     5
+         /\     /\
+        1  3   6
+    */
 
     return 0;
 }
+
+// ==================================================================

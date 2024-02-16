@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ====================== Node ======================
 struct Node
 {
     int data;
     struct Node *next;
 };
 
+// ====================== Traversal ======================
 void linkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
@@ -17,6 +19,7 @@ void linkedListTraversal(struct Node *ptr)
 }
 
 // Case 1
+// ====================== Insert At First ======================
 struct Node *insertAtFirst(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -27,6 +30,7 @@ struct Node *insertAtFirst(struct Node *head, int data)
 }
 
 // Case 2
+// ====================== Insert At Index ======================
 struct Node *insertAtIndex(struct Node *head, int data, int index)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -45,6 +49,7 @@ struct Node *insertAtIndex(struct Node *head, int data, int index)
 }
 
 // Case 3
+// ====================== Insert At Index ======================
 struct Node *insertAtEnd(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -61,6 +66,7 @@ struct Node *insertAtEnd(struct Node *head, int data)
 }
 
 // Case 4
+// ====================== Insert After Node ======================
 struct Node *insertAfterNode(struct Node *head, struct Node *prevNode, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -72,6 +78,7 @@ struct Node *insertAfterNode(struct Node *head, struct Node *prevNode, int data)
     return head;
 }
 
+// ====================== Main ======================
 int main()
 {
     struct Node *head;
@@ -112,3 +119,5 @@ int main()
 
     return 0;
 }
+
+// ==================================================================

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// ====================== Stack ======================
 struct stack
 {
     int size;
@@ -9,11 +10,13 @@ struct stack
     char *arr;
 };
 
+// ====================== Top ======================
 int stackTop(struct stack *sp)
 {
     return sp->arr[sp->top];
 }
 
+// ====================== Is Empty ======================
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -26,6 +29,7 @@ int isEmpty(struct stack *ptr)
     }
 }
 
+// ====================== Is Full ======================
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -38,6 +42,7 @@ int isFull(struct stack *ptr)
     }
 }
 
+// ====================== Push ======================
 void push(struct stack *ptr, char val)
 {
     if (isFull(ptr))
@@ -51,6 +56,7 @@ void push(struct stack *ptr, char val)
     }
 }
 
+// ====================== Pop ======================
 char pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
@@ -65,6 +71,8 @@ char pop(struct stack *ptr)
         return val;
     }
 }
+
+// ====================== Precedence ======================
 int precedence(char ch)
 {
     if (ch == '*' || ch == '/')
@@ -75,6 +83,7 @@ int precedence(char ch)
         return 0;
 }
 
+// ====================== Is Operator ======================
 int isOperator(char ch)
 {
     if (ch == '+' || ch == '-' || ch == '*' || ch == '/')
@@ -82,6 +91,8 @@ int isOperator(char ch)
     else
         return 0;
 }
+
+// ====================== Infix to Postfix ======================
 char *infixToPostfix(char *infix)
 {
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
@@ -121,9 +132,13 @@ char *infixToPostfix(char *infix)
     postfix[j] = '\0';
     return postfix;
 }
+
+// ====================== Main ======================
 int main()
 {
     char *infix = "x-y/z-k*d";
     printf("postfix is %s", infixToPostfix(infix));
     return 0;
 }
+
+// ==================================================================
